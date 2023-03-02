@@ -2,9 +2,6 @@ const inputEl = document.querySelector("#validation-input");
 const dataLengthValue = inputEl.getAttribute("data-length");
 
 inputEl.addEventListener("blur", changeBorderColor);
-// inputEl.addEventListener("input", () => {
-//   console.log(inputEl.value);
-// });
 
 function changeBorderColor() {
   if (inputEl.value.trim().length === Number(dataLengthValue)) {
@@ -18,5 +15,3 @@ function changeBorderColor() {
   console.log(inputEl.value.length);
   console.log(dataLengthValue);
 }
-
-// dataset.length;

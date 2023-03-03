@@ -29,7 +29,11 @@ button {
   gap: 5px;
 }
 
-.galary-item {
+.img-list {
   display: flex;
   list-style: none;
+}
+
+.img-item {
+  max-width: 240px;
 }

@@ -3,15 +3,15 @@ const dataLengthValue = inputEl.getAttribute("data-length");
 
 inputEl.addEventListener("blur", changeBorderColor);
 
+function changeClass(a, b) {
+  inputEl.classList.add(a);
+  inputEl.classList.remove(b);
+}
+
 function changeBorderColor() {
   if (inputEl.value.trim().length === Number(dataLengthValue)) {
-    inputEl.classList.add("valid");
-    inputEl.classList.remove("invalid");
+    changeClass("valid", "invalid");
   } else {
-    inputEl.classList.add("invalid");
-    inputEl.classList.remove("valid");
+    changeClass("invalid", "valid");
   }
-  console.log(inputEl.value);
-  console.log(inputEl.value.length);
-  console.log(dataLengthValue);
 }

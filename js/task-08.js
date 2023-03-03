@@ -8,10 +8,9 @@ function inputSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+  if (email.value.trim() === "" || password.value.trim() === "") {
     return alert("Всі поля повинні бути заповнені!");
   }
-
   console.log(`Login: ${email.value}, Password: ${password.value}`);
   event.currentTarget.reset();
 }
